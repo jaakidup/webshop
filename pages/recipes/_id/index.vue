@@ -1,31 +1,22 @@
 <template>
-  <section class="recipes">
-
-    <Recipe v-for="recipe in recipes"
-      :key="recipe.id"
-      :id="recipe.id"
-      :title="recipe.title"
-      :thumbnail="recipe.thumbnail"
-      :previewText="recipe.previewText"
-    > 
-    </Recipe>
-
+  <section class="single-recipe">
+    <h1>{{ recipe.title }}</h1>
+    <div>
+      <img class="recipe-image" :src="recipe.thumbnail" :alt="recipe.title">
+    </div>
+    <p>{{ recipe.descriptionText }}</p>
   </section>
 </template>
 
-<script>
-import Recipe from "@/components/Recipe";
-export default {
-  components: {
-    Recipe
-  },
 
-  asyncData() {
+<script>
+export default {
+  asyncData(context) {
     // return axios.get() // return makes it wait for the results
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({
-          recipes: [
+          recipe: [
             {
               id: "1",
               title: "Chorizo and Pepper Spaghetti",
@@ -84,7 +75,7 @@ export default {
               thumbnail: "https://www.crosbys.co.uk/images/departments/1488532775-79319200.png",
               previewText: "No menu is complete without juicy Steak & Chips"
             }
-          ]
+          ].find(el => el.id === context.params.id)
         });
       }, 1500);
     });
@@ -93,11 +84,18 @@ export default {
 </script>
 
 
+
 <style scoped>
-.recipes {
+.single-recipe {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.recipe-image {
+    width: 100%;
 }
 </style>
