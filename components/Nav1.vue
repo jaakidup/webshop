@@ -6,6 +6,9 @@
           <nuxt-link to="/">Starting Page</nuxt-link>
         </li>
         <li>
+          <nuxt-link to="/products">Products</nuxt-link>
+        </li>
+        <li>
           <nuxt-link to="/recipes">Recipes</nuxt-link>
         </li>
         <li>
