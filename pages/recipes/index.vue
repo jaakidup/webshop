@@ -86,7 +86,7 @@ export default {
             }
           ]
         });
-      }, 1500);
+      }, 500);
     });
   }
 };
@@ -97,7 +97,8 @@ export default {
 .recipes {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
+
+  justify-content: space-around;
+  align-items: flex-start;
 }
 </style>

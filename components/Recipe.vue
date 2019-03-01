@@ -17,11 +17,21 @@ export default {
 <style scoped>
 .recipe {
   box-sizing: border-box;
-  box-shadow: 0 0px 0px rgb(221, 221, 221);
+  /* box-shadow: 0 0px 0px rgb(221, 221, 221); */
   width: 280px;
   padding: 10px;
-  border: 1px solid rgb(230, 230, 230);
-  border-radius: 2px;
+  border-top: 2px solid rgb(240, 240, 240);
+  /* border: 1px solid rgb(230, 230, 230); */
+  border-radius: 10px;
+  margin: 10px;
+}
+.recipe:hover {
+  box-sizing: border-box;
+  /* box-shadow: 0 2px 2px rgb(190, 190, 190); */
+  width: 280px;
+  padding: 10px;
+  border-top: 2px solid rgb(224, 224, 224);
+  border-radius: 10px;
   margin: 10px;
 }
 
