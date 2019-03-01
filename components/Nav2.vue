@@ -3,8 +3,10 @@
         <nuxt-link to="/" class="logo">Jaakit</nuxt-link>
         <nav>
             <ul>
-                <li><nuxt-link to="/">Starting Page</nuxt-link></li>
+                <!-- <li><nuxt-link to="/">Starting Page</nuxt-link></li> -->
+                <li><nuxt-link to="/products">Products</nuxt-link></li>
                 <li><nuxt-link to="/recipes">Recipes</nuxt-link></li>
+                <li><nuxt-link to="/profiles">Profiles</nuxt-link></li>
                 <li><nuxt-link to="/about">About</nuxt-link></li>
             </ul>
         </nav>
@@ -20,9 +22,12 @@ export default {
 
 <style scoped>
 header {
-    background: rgb(91, 231, 150);
+    background: #96cdad;
     display: grid;
     grid-template-columns: repeat(2, auto);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px 2px;
+    margin-bottom: 1rem;
+    vertical-align: center;
 }
 
 .logo, li a {
@@ -31,8 +36,8 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: bold;
-    color:white;
-    font-size: .9em;
+    color:#676d66;
+    font-size: 0.9em;
 }
 nav {
     justify-self: right;

@@ -1,17 +1,17 @@
 <template>
   <div>
-    <Nav1/>
+    <!-- <Nav1/> -->
     <Nav2/>
     <nuxt/>
   </div>
 </template>
 
 <script>
-import Nav1 from "@/components/Nav1";
+// import Nav1 from "@/components/Nav1";
 import Nav2 from "@/components/Nav2";
 export default {
   components: {
-    Nav1, 
+    // Nav1, 
     Nav2
   }
 };
