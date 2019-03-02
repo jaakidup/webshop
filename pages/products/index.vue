@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import data from '@/services/data';
+import productData from '@/services/products';
 export default {
   asyncData(ctx, callback) {
     setTimeout(() => {
-      callback(null, { products: data });
+      callback(null, { products: productData });
     }, 300);
   },
 }
