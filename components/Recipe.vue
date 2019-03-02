@@ -15,15 +15,21 @@ export default {
 </script>
 
 <style scoped>
+
+h1 {
+  margin-top: 0.5em;
+}
+p {
+  margin-top: 0.5em;
+}
+
 .recipe {
   box-sizing: border-box;
-  /* box-shadow: 0 0px 0px rgb(221, 221, 221); */
   width: 280px;
   padding: 10px;
-  /* border-top: 2px solid rgb(240, 240, 240); */
-  /* border: 1px solid rgb(230, 230, 230); */
-  border-radius: 10px;
   margin: 10px;
+  height: 100%;
+
 }
 .recipe:hover {
   box-sizing: border-box;
