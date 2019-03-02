@@ -1,6 +1,6 @@
 <template>
-  <nuxt-link :to="'/recipes/'+id">
-    <article class="recipe">
+  <nuxt-link :to="'/products/'+id">
+    <article class="product">
       <div class="thumbnail" :style="{backgroundImage: 'url('+ thumbnail +')'}"></div>
       <h1>{{ title }}</h1>
       <p>{{ previewText }}</p>
@@ -23,7 +23,7 @@ p {
   margin-top: 0.5em;
 }
 
-.recipe {
+.product {
   box-sizing: border-box;
   width: 280px;
   padding: 10px;
@@ -31,7 +31,7 @@ p {
   height: 100%;
 
 }
-.recipe:hover {
+.product:hover {
   box-sizing: border-box;
   /* box-shadow: 0 2px 2px rgb(190, 190, 190); */
   width: 280px;
