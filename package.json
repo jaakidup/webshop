@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "buefy": "^0.7.3",
     "bulma": "^0.7.4",
     "cross-env": "^5.2.0",
-    "font-awesome": "^4.7.0",
     "nuxt": "^2.4.0",
     "nuxt-buefy": "^0.3.4"
   },

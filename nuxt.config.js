@@ -49,8 +49,10 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-buefy',
+    'nuxt-buefy'
   ],
+
+
   /*
   ** Axios module configuration
   */
@@ -68,5 +70,6 @@ module.exports = {
     extend(config, ctx) {
       
     }
+
   }
 }

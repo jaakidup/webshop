@@ -1,21 +1,17 @@
 <template>
-    <div class="signin">
-        <h2>Please Sign in to your existing profile</h2> 
-        <br>
-        <nuxt-link to="/">Back to home</nuxt-link>
-    </div>
+  <AuthForm header="Sign In"/>
 </template>
 
 <script>
-export default {
+import AuthForm from "@/components/AuthForm";
 
+export default {
+  components: {
+    AuthForm
 }
+};
 </script>
 
 <style>
-.signin {
-text-align: center;
-  align-content: center;
-}
 
 </style>
