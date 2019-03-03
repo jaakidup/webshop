@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <nuxt-link class="navbar-item logo" to="/">Jaakit {{ active }}</nuxt-link>
+      <nuxt-link class="navbar-item logo" to="/">Jaakit</nuxt-link>
       <!-- <a class="navbar-item" href="https://bulma.io">
       <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
       </a>-->
@@ -31,8 +31,8 @@
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">Profile</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">SignIn</a>
-            <a class="navbar-item">SignUp</a>
+            <nuxt-link class="navbar-item" to="/profiles/signin">SignIn</nuxt-link>
+            <nuxt-link class="navbar-item" to="/profiles/signup">SignUp</nuxt-link>            
             <!-- <a class="navbar-item">
             </a>-->
             <hr class="navbar-divider">

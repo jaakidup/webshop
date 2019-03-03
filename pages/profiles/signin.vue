@@ -1,6 +1,6 @@
 <template>
-    <div class="new-profile">
-        <h2>New Profile</h2> 
+    <div class="signin">
+        <h2>Please Sign in to your existing profile</h2> 
         <br>
         <nuxt-link to="/">Back to home</nuxt-link>
     </div>
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style>
-.new-profile {
+.signin {
 text-align: center;
   align-content: center;
 }
