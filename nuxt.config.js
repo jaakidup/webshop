@@ -24,13 +24,16 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#676d66' },
+  loading: { color: '#3B8070' },
 
   /*
   ** Global CSS
   */
   css: [
-    "@/assets/css/main.css"
+    "@/assets/css/main.css",
+    { src: 'bulma/bulma.sass', lang: 'sass' },
+    "@/assets/css/main.scss",
+    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
   ],
 
   /*
@@ -44,7 +47,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-buefy',
   ],
   /*
   ** Axios module configuration

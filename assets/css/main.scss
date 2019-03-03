@@ -1,0 +1,24 @@
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+// customize styles
+$primary: #fff;
+$link: rgb(73, 73, 73);
+$info: silver;
+$success: purple;
+$warning: red;
+$danger: darkred;
+$dark: grey;
+$text: darkgrey;
+
+
+$navbar-background-color: rgb(252, 252, 252);
+$navbar-box-shadow-color: rgba(0, 0, 0, 0.19) 0px 0px 130px -9px;;
+
+$background: silver;
+$body-background-color: rgb(255, 255, 255);
+
+
+$footer-background-color: silver;
+$footer-padding: 1rem 1.5rem 1rem;
+
+@import '~bulma';
