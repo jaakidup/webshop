@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 header {
-    background: #96cdad;
+    background: #292929;
     display: grid;
     grid-template-columns: repeat(2, auto);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 6px 2px;
@@ -51,12 +51,14 @@ li {
 li a {
     padding: 1em 2em;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.042);
+    /* background: rgba(255, 255, 255, 0.042); */
+    transition: background .2s ease-in-out;
 }
 li a:hover {
     padding: 1em 2em;
     display: inline-block;
-    background: rgba(0, 0, 0, 0.042);
+    /* background: rgba(0, 0, 0, 0.042); */
+    background: rgba(255, 255, 255, 0.904);
 }
 
 </style>
