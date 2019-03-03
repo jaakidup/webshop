@@ -1,11 +1,9 @@
 <template>
   <div>
-
     <!-- <Nav1/> -->
     <BulmaNav class="navbar"/>
     <!-- <Nav2/> -->
-     <nuxt class="content"/>
-
+    <nuxt class="content"/>
   </div>
 </template>
 
@@ -15,7 +13,7 @@
 import BulmaNav from "@/components/BulmaNav";
 export default {
   components: {
-    // Nav1, 
+    // Nav1,
     // Nav2,
     BulmaNav
   }
@@ -24,11 +22,9 @@ export default {
 
 
 <style>
-
 .content {
   margin-top: 3rem;
 }
-
 
 html {
   /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -49,6 +45,4 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
-
 </style>

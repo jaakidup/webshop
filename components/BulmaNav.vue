@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <nuxt-link class="navbar-item logo" to="/">Jaakit</nuxt-link>
       <!-- <a class="navbar-item" href="https://bulma.io">
@@ -70,6 +70,6 @@ export default {
 <style scoped>
 .navbar {
   font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
+  font-weight: bold;
 }
 </style>
