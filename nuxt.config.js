@@ -16,8 +16,9 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,700' }
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Coda' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,700' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat+Alternates'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Coda' },
     ]
   },
 

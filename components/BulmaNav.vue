@@ -20,10 +20,7 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" 
-      class="navbar-menu"
-      v-bind:class="{ 'is-active': isActive }">
-
+    <div id="navbarBasicExample" class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
       <div class="navbar-end">
         <nuxt-link class="navbar-item" to="/products">Products</nuxt-link>
         <nuxt-link class="navbar-item" to="/recipes">Recipes</nuxt-link>
@@ -32,7 +29,7 @@
           <a class="navbar-link">Profile</a>
           <div class="navbar-dropdown">
             <nuxt-link class="navbar-item" to="/profiles/signin">SignIn</nuxt-link>
-            <nuxt-link class="navbar-item" to="/profiles/signup">SignUp</nuxt-link>            
+            <nuxt-link class="navbar-item" to="/profiles/signup">SignUp</nuxt-link>
             <!-- <a class="navbar-item">
             </a>-->
             <hr class="navbar-divider">
@@ -66,12 +63,13 @@ export default {
       }
     }
   },
-  props: [
-    'isActive'
-  ]
-
-
-
-
+  props: ["isActive"]
 };
 </script>
+
+<style scoped>
+.navbar {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+}
+</style>
