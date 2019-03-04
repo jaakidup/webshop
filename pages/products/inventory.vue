@@ -72,7 +72,7 @@ export default {
 .product {
   margin: 1em;
   padding: 1em;
-  /* width: 300px; */
+  width: 300px;
   box-sizing: border-box;
   border: thin solid rgb(226, 226, 226);
   border-radius: 0px 16px 0px 16px;
