@@ -53,6 +53,12 @@ module.exports = {
   ],
 
 
+  // This would run the middleware on every route change
+  // router: {
+  //   middleware: 'stats'
+  // },
+
+
   /*
   ** Axios module configuration
   */
