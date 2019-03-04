@@ -22,7 +22,7 @@ export default {
   asyncData(ctx, callback) {
     setTimeout(() => {
       callback(null, { products: productData });
-    }, 300);
+    }, 0);
   }
 };
 </script>

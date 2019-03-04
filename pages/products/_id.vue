@@ -1,6 +1,5 @@
 <template>
   <section class="single-product">
-    {{ product }}
     <h1>{{ product.title }}</h1>
     <div>
       <img class="product-image" :src="product.thumbnail" :alt="product.title">

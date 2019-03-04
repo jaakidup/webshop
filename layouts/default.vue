@@ -1,24 +1,31 @@
 <template>
   <div>
     <!-- <Nav1/> -->
-    <Nav2/>
-    <nuxt/>
+    <BulmaNav class="navbar"/>
+    <!-- <Nav2/> -->
+    <nuxt class="content"/>
   </div>
 </template>
 
 <script>
 // import Nav1 from "@/components/Nav1";
-import Nav2 from "@/components/Nav2";
+// import Nav2 from "@/components/Nav2";
+import BulmaNav from "@/components/BulmaNav";
 export default {
   components: {
-    // Nav1, 
-    Nav2
+    // Nav1,
+    // Nav2,
+    BulmaNav
   }
 };
 </script>
 
 
 <style>
+.content {
+  margin-top: 3rem;
+}
+
 html {
   /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif; */
@@ -37,34 +44,5 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
 }
 </style>

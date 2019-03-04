@@ -16,21 +16,25 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,700' }
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Coda' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,700' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat+Alternates'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Coda' },
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#676d66' },
+  loading: { color: '#3B8070' },
 
   /*
   ** Global CSS
   */
   css: [
-    "@/assets/css/main.css"
+    "@/assets/css/main.css",
+    { src: 'bulma/bulma.sass', lang: 'sass' },
+    "@/assets/css/main.scss",
+    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
   ],
 
   /*
@@ -44,8 +48,17 @@ module.exports = {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-buefy'
   ],
+
+
+  // This would run the middleware on every route change
+  // router: {
+  //   middleware: 'stats'
+  // },
+
+
   /*
   ** Axios module configuration
   */
@@ -63,5 +76,6 @@ module.exports = {
     extend(config, ctx) {
       
     }
+
   }
 }
