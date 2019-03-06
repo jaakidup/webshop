@@ -63,7 +63,7 @@ module.exports = {
     //   keyName: 'somevalue', //  If not entered, “ip” is the default value
     //   saltName: 'region' //  If not entered, “region” is the default value
     // }]
-  
+
   ],
 
 
@@ -71,7 +71,6 @@ module.exports = {
   // router: {
   //   middleware: 'stats'
   // },
-
 
   /*
   ** Axios module configuration
