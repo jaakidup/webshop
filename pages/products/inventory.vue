@@ -13,13 +13,13 @@
         <button class="button" @click="remove(product.id)">Remove Product</button>
       </div>
     </div>
+
   </div>
 </template>
 
 <script>
 import { mapMutations } from "vuex";
 export default {
-  transition: "test",
   data() {
     return {
       fake: 0
@@ -27,6 +27,7 @@ export default {
   },
   computed: {
     products() {
+      // return this.$store.state.products.products;
       return this.$store.state.products.products;
     }
   },
@@ -63,7 +64,7 @@ export default {
 .products {
   margin: 3em;
   display: flex;
-  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   align-content: center;
@@ -76,6 +77,7 @@ export default {
   box-sizing: border-box;
   border: thin solid rgb(226, 226, 226);
   border-radius: 0px 16px 0px 16px;
- 
 }
+
+
 </style>

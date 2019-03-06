@@ -23,6 +23,7 @@
     <div id="navbarBasicExample" class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
       <div class="navbar-end">
         <nuxt-link class="navbar-item" to="/products">Products</nuxt-link>
+        <nuxt-link class="navbar-item" to="/categories">Categories</nuxt-link>
         <nuxt-link class="navbar-item" to="/recipes">Recipes</nuxt-link>
         <!-- <nuxt-link class="navbar-item" to="/profiles">Profiles</nuxt-link> -->
         <div class="navbar-item has-dropdown is-hoverable">
@@ -30,6 +31,8 @@
           <div class="navbar-dropdown">
             <nuxt-link class="navbar-item" to="/profiles/signin">SignIn</nuxt-link>
             <nuxt-link class="navbar-item" to="/profiles/signup">SignUp</nuxt-link>
+            <nuxt-link class="navbar-item" to="/products/inventory">Inventory</nuxt-link>
+
             <!-- <a class="navbar-item">
             </a>-->
             <hr class="navbar-divider">

@@ -17,7 +17,7 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,700' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat+Alternates'},
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat+Alternates' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Coda' },
     ]
   },
@@ -33,8 +33,8 @@ module.exports = {
   css: [
     "@/assets/css/main.css",
     { src: 'bulma/bulma.sass', lang: 'sass' },
-    "@/assets/css/main.scss",
-    { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
+    "@/assets/css/main.scss"
+    // { src: 'font-awesome/scss/font-awesome.scss', lang: 'scss' }
   ],
 
   /*
@@ -49,7 +49,21 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-buefy'
+    'nuxt-buefy',
+    // 'nuxt-vuex-localstorage'
+    ['nuxt-vuex-localstorage', {
+      mode: 'debug',
+      localStorage: ['products']  //  If not entered, “localStorage” is the default value
+      // sessionStorage: ['sfoo', 'sbar']  //  If not entered, “sessionStorage” is the default value
+    }]
+    // API mode send a GET request to the api endpoint on launch
+    // ['nuxt-vuex-localstorage', {
+    //   mode: 'api',
+    //   api: 'http://localhost:3030/test', //  If not entered, “https://ipinfo.io” is the default value
+    //   keyName: 'somevalue', //  If not entered, “ip” is the default value
+    //   saltName: 'region' //  If not entered, “region” is the default value
+    // }]
+  
   ],
 
 
@@ -74,7 +88,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
 
   }

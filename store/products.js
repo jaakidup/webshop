@@ -1,3 +1,5 @@
+import { ProductService } from "../services/products";
+
 
 export const state = () => ({
     products: []
@@ -8,8 +10,12 @@ export const state = () => ({
 
 export const mutations = {
     ADD(state, product) {
-        state.products.push(product)
+        state.products.push(product);
+        ProductService.postProduct(product);
+        // console.log(ProductService);
+    
     },
+
 
     // UNTESTED
     REMOVE(state, product) {
@@ -23,9 +29,11 @@ export const mutations = {
         if (index != -1) {
             console.log("Removing product at index: ", index);
             state.products.splice(index, 1);
-        }
-    },
 
+            ProductService.deleteProduct(product);
+        }
+
+    },
 
 
 }

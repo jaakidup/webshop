@@ -10,16 +10,16 @@
 
 
 <script>
-import productData from "@/services/products";
+// import productData from "@/services/products";
 
 export default {
-  asyncData(context) {
-    return new Promise((resolve, reject) => {
-      resolve({
-        product: productData.find(el => el.id === context.params.id)
-      });
-    });
-  }
+  // asyncData(context) {
+  //   return new Promise((resolve, reject) => {
+  //     resolve({
+  //       product: productData.find(el => el.id === context.params.id)
+  //     });
+  //   });
+  // }
 };
 </script>
 

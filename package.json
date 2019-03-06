@@ -16,7 +16,8 @@
     "bulma": "^0.7.4",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
-    "nuxt-buefy": "^0.3.4"
+    "nuxt-buefy": "^0.3.4",
+    "nuxt-vuex-localstorage": "^1.2.6"
   },
   "devDependencies": {
     "node-sass": "^4.11.0",
