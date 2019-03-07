@@ -10,15 +10,16 @@
 
         <p>{{product.description}}</p>
         <p>#{{product.id}} Price: {{product.price}}</p>
-        <button class="button" @click="remove(product.id)">Remove Product</button>
+        <button class="button" @click="removeProduct(product)">Remove Product</button>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+// import { mapMutations } from "vuex";
+import { ProductService } from "@/services/products";
+
 export default {
   data() {
     return {
@@ -33,25 +34,41 @@ export default {
   },
 
   methods: {
-    add() {
-      console.log("Let's try adding a product.");
-      this.$store.commit("products/ADD", {
-        id: this.fake++,
+    async add() {
+      const newProduct = {
         name: "some test product",
         price: 14323,
         description: "This is a test product to check the store"
-      });
+      };
+
+      console.log("Let's try adding a product.");
+
+      const product = await ProductService.postProduct(newProduct);
+      console.log("saved product", product);
+
+      this.$store.commit("products/ADD", product);
     },
-    remove(id) {
+
+
+
+
+  removeProduct(product) {
       this.$dialog.confirm({
-        message: "Are you sure you want to delete this product?",
-        onConfirm: () => {
-          this.$store.commit("products/REMOVE", {
-            id: id
+            message: "Are you sure you want to delete this product?",
+            onConfirm: () => {
+              this.remove(product);
+              this.$toast.open({ message: "Product deleted", type: "is-success" });
+            }
           });
-          this.$toast.open({ message: "Product deleted", type: "is-success" });
+  },
+
+
+
+    async remove(product) {
+        const deletedProduct = await ProductService.deleteProduct(product);
+        if(deletedProduct) {
+          this.$store.commit("products/REMOVE", deletedProduct);
         }
-      });
     }
   }
 };
@@ -78,6 +95,4 @@ export default {
   border: thin solid rgb(226, 226, 226);
   border-radius: 0px 16px 0px 16px;
 }
-
-
 </style>
