@@ -17,8 +17,6 @@
 </template>
 
 <script>
-// import { mapMutations } from "vuex";
-import { ProductService } from "@/services/products";
 
 export default {
   data() {
@@ -28,13 +26,12 @@ export default {
   },
   computed: {
     products() {
-      // return this.$store.state.products.products;
       return this.$store.state.products.products;
     }
   },
 
   methods: {
-    async add() {
+    add() {
       const newProduct = {
         name: "some test product",
         price: 14323,
@@ -43,33 +40,22 @@ export default {
 
       console.log("Let's try adding a product.");
 
-      const product = await ProductService.postProduct(newProduct);
-      console.log("saved product", product);
+      this.$store.dispatch("products/ADD_PRODUCT", newProduct);
 
-      this.$store.commit("products/ADD", product);
     },
 
-
-
-
-  removeProduct(product) {
+    removeProduct(product) {
       this.$dialog.confirm({
-            message: "Are you sure you want to delete this product?",
-            onConfirm: () => {
-              this.remove(product);
-              this.$toast.open({ message: "Product deleted", type: "is-success" });
-            }
-          });
-  },
-
-
-
-    async remove(product) {
-        const deletedProduct = await ProductService.deleteProduct(product);
-        if(deletedProduct) {
-          this.$store.commit("products/REMOVE", deletedProduct);
+        message: "Are you sure you want to delete this product?",
+        onConfirm: () => {
+          if(this.$store.dispatch("products/DELETE_PRODUCT", product)) {
+            this.$toast.open({ message: "Product deleted", type: "is-success" });
+          } else {
+            this.$toast.open({ message: "Product wasn't deleted", type: "is-failure" });
+          }
         }
-    }
+      });
+    },
   }
 };
 </script>
